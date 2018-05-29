@@ -1439,6 +1439,45 @@ var wpcf7 = {"apiSettings":{"root":"http:\/\/besknx.com\/website\/en\/wp-json\/c
 <script type='text/javascript' src='http://besknx.com/website/wp-content/themes/inovado/framework/js/twitter/jquery.tweet.js?ver=1.0'></script>
 <script type='text/javascript' src='http://besknx.com/website/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=2.9.8'></script>
 <script type='text/javascript' src='http://besknx.com/website/wp-includes/js/wp-embed.min.js?ver=4.9.6'></script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+    
+	    /* ------------------------------------------------------------------------ */
+		/* Add PrettyPhoto */
+		/* ------------------------------------------------------------------------ */
+		
+		var lightboxArgs = {			
+						animation_speed: 'fast',
+						overlay_gallery: true,
+			autoplay_slideshow: false,
+						slideshow: 5000, /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+									theme: 'pp_default', 
+									opacity: 0.8,
+						show_title: false,
+			social_tools: "",			deeplinking: false,
+			allow_resize: true, 			/* Resize the photos bigger than viewport. true/false */
+			counter_separator_label: '/', 	/* The separator for the gallery counter 1 "of" 2 */
+			default_width: 940,
+			default_height: 529
+		};
+		
+					$('a[href$=jpg], a[href$=JPG], a[href$=jpeg], a[href$=JPEG], a[href$=png], a[href$=gif], a[href$=bmp]:has(img)').prettyPhoto(lightboxArgs);
+				
+		$('a[class^="prettyPhoto"], a[rel^="prettyPhoto"]').prettyPhoto(lightboxArgs);
+		
+			    
+	    	    		if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {
+					$('#header, #header-v2 #navigation, #header-v3, #header-v4 #navigation, #header-v5 #navigation, #header-v6').waypoint('sticky');
+				}			
+	    
+	    			$('html').css({'background-color' : '#e4e4e4'});
+			    
+
+});
+	
+</script>
 	
 	
 </body>
